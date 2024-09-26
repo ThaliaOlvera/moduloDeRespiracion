@@ -38,19 +38,51 @@ h4 {
   --font-size-xlg: 28;
 }
 
+header {
+  height: 10dvh;
+
+  background-color: rosybrown;
+}
+
 header h1 {
+  margin-top: 0px;
+
+  padding-top: 1rem;
   font-size: var(--font-size-md);
+}
+
+main {
+  height: 80dvh;
+
+  align-content: center;
+
+  background-color: pink;
 }
 
 main section h2 {
   font-size: var(--font-size--sm);
 }
 
+.button-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 0fr);
+  grid-template-rows: repeat(3, 0fr);
+}
+
 .button-container button {
-  width: 100px;
-  height: 30px;
+  width: 5rem;
+  height: 5rem;
 }
 
 footer {
+  height: 10dvh;
+
   font-size: var(--font-size--xsm);
+  background-color: salmon;
+}
+
+footer p {
+  margin-top: 0px;
+  padding-top: 1rem;
 }
