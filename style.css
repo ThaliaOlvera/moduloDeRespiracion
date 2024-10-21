@@ -4,11 +4,8 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100dvh;
+  overflow: hidden;
   margin: 0;
   padding: 0;
 }
@@ -36,97 +33,206 @@ h4 {
   --font-size-lg: 24;
   --font-size-xlg: 28;
 }
+main {
+  width: 100%;
+  height: 80dvb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
 
 .btn_container {
-  width: 100%;
-  height: auto;
-  display: grid;
+  width: 60%;
+  height: 18rem;
+  display: flex;
   justify-content: center;
-  grid-template-columns: repeat(2, 6rem);
-  grid-template-rows: repeat(2, 6rem);
-  gap: 2.5rem;
-
-  padding-right: 10%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.play-button {
-  width: 8rem;
-  height: 8rem;
-  font-size: var(--font-size-md);
-  background-color: var(--color-cyan);
-  color: var(--color-white);
+.btn_container button {
+  width: 6rem;
+  height: 6rem;
+
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px #b3b3b3, -8px -8px 15px #ffffff;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-.play-button:hover {
-  background-color: var(--color-dark-blue);
+button:active {
+  box-shadow: inset 8px 8px 15px #b3b3b3, inset -8px -8px 15px #ffffff;
 }
-
-section article p {
-  font-size: var(--font-size-md);
-}
-
-/*Show Animation*/
 
 .showAnimationLeft {
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(2, 6.25rem);
-  grid-template-rows: repeat(2, 6.25rem);
-  padding-top: 90%;
-  gap: 2.5rem;
+  display: flex;
+  padding-top: 6rem;
 }
 
-/* Estilo inicial del círculo */
 .circle {
-  display: none;
-  position: absolute;
-  left: 42%;
-  top: 20%;
-  width: 20%;
-  height: 10%;
+  width: 5rem;
+  height: 5rem;
+  color: var(--color-white);
+
   border-radius: 50%;
   background-color: var(--color-dark-blue);
   box-shadow: 0 0 1rem 1rem var(--color-dark-blue);
-  animation: expand 10s ease-in-out infinite;
+  animation: expand 12s ease-in-out infinite;
 }
 
-/* Animación para expandir y contraer el círculo */
+#inhaleText,
+#exhaleText,
+#holdText {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
 @keyframes expand {
-  0% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
   33% {
     transform: scale(2);
-    opacity: 0.8;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
   }
   66% {
     transform: scale(2);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
   }
 }
 
+@keyframes showInhale {
+  0%,
+  33% {
+    opacity: 1;
+  }
+  34%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showHold {
+  33%,
+  66% {
+    opacity: 1;
+  }
+  0%,
+  32%,
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showExhale {
+  66%,
+  100% {
+    opacity: 1; /* Mostrar exhale en la fase final */
+  }
+  0%,
+  65% {
+    opacity: 0; /* Ocultar exhale fuera de la fase final */
+  }
+}
+
+#inhaleText {
+  position: relative;
+  top: 1rem;
+  left: 1.3rem;
+  animation: showInhale 12s ease-in-out infinite;
+}
+
+#holdText {
+  position: relative;
+  top: 1rem;
+  right: 0.3rem;
+  animation: showHold 12s ease-in-out infinite;
+}
+
+#exhaleText {
+  position: relative;
+  top: 1rem;
+  right: 2rem;
+  animation: showExhale 12s ease-in-out infinite;
+}
+
+/*Footer*/
+
 footer {
   display: flex;
-  justify-content: start;
-  align-items: start;
-  text-align: start;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   width: 100%;
-  height: 20dvb;
-  color: var(--color-dark-gray);
+  height: 15dvb;
+}
+
+footer ul {
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  margin: 2rem 0px 0px 0px;
 }
 
 footer ul li,
 a {
+  width: 100%;
+  height: auto;
+  text-align: center;
   list-style: none;
   text-decoration: none;
+  font-size: var(--font-size--sm);
   color: var(--color-dark-gray);
+}
+
+/*Mobile view*/
+@media (max-width: 339px) {
+  .btn_container {
+    width: 85%;
+    height: 15rem;
+  }
+
+  .btn_container button {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 345px) {
+  .btn_container {
+    width: 80%;
+    height: 12rem;
+  }
+
+  .btn_container button {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media (min-width: 600px) {
+  .btn_container {
+    width: 65%;
+    height: 17rem;
+  }
+
+  .btn_container button {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (min-width: 1126px) {
+  .btn_container {
+    width: 60%;
+    height: 10rem;
+  }
 }
