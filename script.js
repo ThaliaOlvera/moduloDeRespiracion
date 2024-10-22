@@ -18,13 +18,11 @@ document.querySelectorAll(".play-button").forEach((button, index) => {
 
       button.setAttribute("style", "background-color:#005f6b");
 
-      section.classList.add("showAnimationLeft");
       circle.setAttribute("style", "display:flex");
       playBtn.innerHTML = "Pause";
       console.log(playBtn.innerHTML);
     } else {
       audio.pause();
-      section.classList.remove("showAnimationLeft");
       circle.setAttribute("style", "display:none");
       playBtn.innerHTML = "Play";
       button.setAttribute("style", "background-color:#00b4cc");
