@@ -8,12 +8,14 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  background-color: var(--color-black);
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   text-wrap: pretty;
 }
 
@@ -33,6 +35,65 @@ h4 {
   --font-size-lg: 24;
   --font-size-xlg: 28;
 }
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvb;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 80%;
+  height: 70dvb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  opacity: 1;
+  font-size: var(--font-size-md);
+  color: var(--color-dark-gray);
+  font-weight: 500;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-content: center;
+}
+
+.modal-content p {
+  width: 100%;
+  height: 80%;
+  padding-top: 3rem;
+}
+
+.headphonesIcon {
+  width: 50%;
+  height: 85%;
+}
+
+.cancel-container {
+  width: 100%;
+  text-align: end;
+}
+
+.cancel-container--btn {
+  width: 3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
 main {
   width: 100%;
   height: 80dvb;
@@ -63,11 +124,15 @@ main {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--color-white);
 
-  background-color: var(--color-white);
+  background-color: var(--color-aqua);
   border-radius: 20px;
   border: none;
   outline: none;
-  box-shadow: 3px 13px 13px 0px var(--color-gray);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   transition: all 0.3s ease;
 
   cursor: pointer;
@@ -198,7 +263,7 @@ a {
   list-style: none;
   text-decoration: none;
   font-size: var(--font-size--sm);
-  color: var(--color-dark-gray);
+  color: var(--color-white);
 }
 
 /*Mobile view*/
@@ -225,8 +290,13 @@ a {
     height: 6rem;
   }
 
+  .headphonesIcon {
+    width: 60%;
+    height: 75%;
+  }
+
   footer {
-    height: 20dvb;
+    height: 15dvb;
   }
 }
 @media (min-width: 600px) {
@@ -240,6 +310,11 @@ a {
     height: 6rem;
   }
 
+  .headphonesIcon {
+    width: 40%;
+    height: 80%;
+  }
+
   footer {
     height: 15dvb;
   }
@@ -249,5 +324,10 @@ a {
   .btn_container {
     width: 60%;
     height: 10rem;
+  }
+
+  .headphonesIcon {
+    width: 25%;
+    height: 80%;
   }
 }
