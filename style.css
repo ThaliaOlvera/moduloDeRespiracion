@@ -74,7 +74,7 @@ p {
 }
 
 .headphonesIcon {
-  width: 50%;
+  width: 70%;
   height: 85%;
 }
 
@@ -308,6 +308,10 @@ footer p {
 
     margin: 16px 0px 0px 0px;
   }
+  .headphonesIcon {
+    width: 85%;
+    height: 90%;
+  }
 }
 
 @media (min-width: 340px) {
@@ -322,8 +326,8 @@ footer p {
   }
 
   .headphonesIcon {
-    width: 60%;
-    height: 75%;
+    width: 80%;
+    height: 15rem;
   }
 
   .btn_container {
@@ -370,7 +374,7 @@ footer p {
   }
 
   .headphonesIcon {
-    width: 25%;
-    height: 80%;
+    width: 17%;
+    height: auto;
   }
 }
