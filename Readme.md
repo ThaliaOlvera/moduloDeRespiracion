@@ -1,54 +1,51 @@
-# Módulo de Respiración
+# 🌬️ Módulo de Respiración
 
-Este proyecto es un módulo de respiración que forma parte de una aplicación de meditación diseñada para guiar a los usuarios en ejercicios de respiración y relajación a través de diferentes sonidos y visualizaciones. El módulo permite al usuario seleccionar sonidos específicos para mejorar la experiencia de meditación y disfrutar de un ambiente de calma y concentración.
+¡Bienvenido al Módulo de Respiración! Este proyecto es un módulo diseñado como parte de una aplicación de meditación, creado para guiarte en ejercicios de respiración relajantes. Aquí encontrarás una serie de sonidos y visualizaciones que transformarán tu entorno en un espacio de paz y concentración.
 
-## Descripción
+## 🧘 Descripción General
 
-El módulo incluye:
+En este módulo, el usuario podrá:
 
-- Una interfaz con botones que representan diferentes sonidos relajantes.
-- Una animación de círculo de expansión que guía al usuario en un ejercicio de respiración (inhala, retén, exhala).
-- Una recomendación en modal para usar audífonos, la cual puede cerrarse al hacer clic fuera del modal.
-- La funcionalidad de reproducción de sonido asociada a cada botón, permitiendo pausar y reproducir sonidos específicos.
-- La pausa de los sonidos y cierre de modal al hacer clic fuera de ellos.
+- **Seleccionar sonidos** calmantes que enriquecen la experiencia de meditación.
+- **Seguir una animación de círculo** para guiar el ritmo de respiración: inhala, retén y exhala.
+- **Recibir una recomendación en modal** para utilizar audífonos (que se puede cerrar con un clic fuera de la ventana).
+- **Controlar la reproducción de los sonidos**, pausando y reanudando cuando sea necesario.
+- **Detener los sonidos automáticamente** al hacer clic fuera del área del botón de audio.
 
-## Funcionalidades
+## 🚀 Funcionalidades
 
-1. **Reproducción y Pausa de Audio**:
-   - Cada botón permite reproducir o pausar un sonido.
-   - Solo un sonido puede reproducirse a la vez.
-2. **Animación de Círculo de Respiración**:
-   - La animación del círculo se muestra cuando se reproduce un sonido y desaparece al detenerlo.
-3. **Modal de Recomendación**:
+1. **Reproducción y Pausa de Audio** 🎵
 
-   - Al cargar la aplicación, aparece un modal recomendando el uso de audífonos.
-   - Se cierra al hacer clic fuera del modal.
+   - Cada botón permite iniciar o detener un sonido específico, con reproducción única a la vez.
 
-4. **Control por Clic Externo**:
-   - La reproducción de sonidos se detiene cuando se hace clic fuera del botón de audio o del modal.
+2. **Animación Guiada de Respiración** 🌫️
 
-## Tecnologías
+   - Visualización de un círculo en expansión para ayudar a seguir el ejercicio de respiración, que desaparece cuando se pausa el audio.
 
-- **HTML5**: Estructura del contenido.
-- **CSS3**: Estilos visuales y animaciones.
-- **JavaScript (ES6+)**: Lógica de interacción, control de audio y manejo del DOM.
+3. **Modal de Recomendación de Audífonos** 🎧
 
-## Requisitos
+   - Una recomendación al iniciar la aplicación para mejorar la experiencia con audífonos.
+   - Se cierra fácilmente al hacer clic fuera del modal.
 
-- Navegador moderno compatible con HTML5, CSS3 y JavaScript ES6.
-- Archivos de audio en el directorio `src/sounds` con los nombres correctos para cada botón.
+4. **Control de Sonido por Clic Externo** 👆
+   - Todos los sonidos se detienen automáticamente cuando se hace clic fuera del botón de audio o modal.
 
-## Instalación y Uso
+## 🛠️ Tecnologías
 
-1. **Clonar el Repositorio**
+Este módulo se desarrolló utilizando:
 
-   ```bash
-   git clone https://github.com/tu-usuario/modulo-respiracion.git
-   cd modulo-respiracion
-   ```
+- **HTML5**: Para la estructura del contenido.
+- **CSS3**: Para estilización y animaciones.
+- **JavaScript (ES6+)**: Para la lógica de interacción, control de audio y manejo de eventos en el DOM.
 
-2. **Estructura de Archivos**
-   Asegúrate de tener los archivos de audio en `src/sounds/` con los nombres correspondientes:
+## ⚙️ Requisitos
+
+- **Navegador compatible** con HTML5, CSS3 y JavaScript ES6.
+- **Archivos de audio** en la carpeta `src/sounds` con los nombres exactos que se muestran a continuación.
+
+## 📂 Estructura de Archivos y Sonidos Requeridos
+
+1. Ubica los archivos de audio en `src/sounds/` con los nombres siguientes:
 
    - `airwindmeditation.mp3`
    - `reikisounds.mp3`
@@ -57,20 +54,28 @@ El módulo incluye:
    - `waves.mp3`
    - `meditation.mp3`
 
-3. **Abrir el Proyecto**
-   - Abre `index.html` en tu navegador preferido.
-   - Asegúrate de que los permisos de reproducción de audio están habilitados.
+2. Asegúrate de que están correctamente nombrados y ubicados en el directorio indicado.
 
-## Contribución
+## 📲 Instalación y Ejecución
 
-Este proyecto está abierto a mejoras y contribuciones. Si deseas contribuir, abre un PR o contacta al administrador del proyecto.
+1. **Clonar el Repositorio**
 
-## Créditos
+   ```bash
+   git clone https://github.com/tu-usuario/modulo-respiracion.git
+   cd modulo-respiracion
+   ```
+
+2. **Abrir el Proyecto**
+   - Abre `index.html` en tu navegador preferido y asegúrate de que los permisos de reproducción de audio están habilitados.
+
+## 🫱 Contribución
+
+Este proyecto está abierto a mejoras. Si tienes ideas o mejoras, ¡no dudes en hacer un PR o contacta al administrador del proyecto! 🛠️
+
+## 👩‍💻 Créditos
 
 Desarrollado por **Ilse Thalia Olvera de la Rosa** - 2024.
 
-## Licencia
+## 📜 Licencia
 
 Este proyecto está bajo la licencia MIT.
-
----
