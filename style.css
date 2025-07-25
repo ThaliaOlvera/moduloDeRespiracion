@@ -143,6 +143,7 @@ main {
 }
 
 .btn_container .play-button:hover {
+  scale: 1.1;
   box-shadow: 3px 13px 54px -8px var(--color-cyan);
 }
 
