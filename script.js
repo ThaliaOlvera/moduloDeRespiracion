@@ -36,6 +36,10 @@ function toggleAudio(button, audio) {
     pauseAllAudio();
     audio.play();
     button.style.backgroundColor = "#005f6b";
+
+    circle.style.animation = "none";
+    circle.offsetHeight;
+    circle.style.animation = null;
     circle.style.display = "flex";
     playBtn.innerHTML = "Pause";
   } else {
