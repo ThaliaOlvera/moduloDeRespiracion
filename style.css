@@ -52,7 +52,6 @@ p {
 .modal-content {
   width: 80%;
   height: 70dvb;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
@@ -67,15 +66,12 @@ p {
   align-content: center;
 }
 
-.modal-content p {
+.headphonesIcon_container {
   width: 100%;
-  height: 80%;
-  padding-top: 3rem;
-}
-
-.headphonesIcon {
-  width: 70%;
-  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cancel-container {
@@ -109,8 +105,7 @@ main {
 }
 
 .btn_container {
-  width: 60%;
-  height: 18rem;
+  width: 50%;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -222,22 +217,25 @@ main {
 
 #inhaleText {
   position: relative;
-  top: 1rem;
-  left: 1.1rem;
+  top: 0rem;
+  margin-top: 0.5rem;
+  left: 0.5rem;
   animation: showInhale 12s ease-in-out infinite;
 }
 
 #holdText {
   position: relative;
-  top: 1rem;
-  right: 0.3rem;
+  top: 0rem;
+  margin-top: 0.5rem;
+  right: 0.5rem;
   animation: showHold 12s ease-in-out infinite;
 }
 
 #exhaleText {
   position: relative;
-  top: 1rem;
-  right: 2rem;
+  margin-top: 0.5rem;
+  top: 0rem;
+  right: 2.3rem;
   animation: showExhale 12s ease-in-out infinite;
 }
 
@@ -290,7 +288,9 @@ footer p {
 @media (max-width: 339px) {
   .btn_container {
     width: 85%;
-    height: 15rem;
+    height: auto;
+    gap: 1rem;
+    padding-top: 1rem;
   }
 
   .btn_container button {
@@ -301,7 +301,7 @@ footer p {
   footer {
     width: 100%;
     height: 20dvb;
-    padding-top: 1rem;
+    padding-top: 0rem;
   }
 
   footer p {
@@ -316,6 +316,27 @@ footer p {
   .headphonesIcon {
     width: 85%;
     height: 90%;
+  }
+
+  #inhaleText,
+  #exhaleText,
+  #holdText {
+    top: 0rem;
+  }
+
+  #inhaleText {
+    left: 0.3rem;
+  }
+
+  #exhaleText {
+    right: 1.5rem;
+  }
+
+  .circle {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -333,24 +354,39 @@ footer p {
   .btn_container {
     width: 60%;
     height: 20rem;
-    padding-top: 5rem;
   }
 
   .circle {
-    margin-bottom: 1rem;
+    display: none;
+    width: 3rem;
+    height: 3rem;
   }
 
   footer {
-    height: 10dvb;
-    padding-top: 3rem;
+    height: 20dvb;
+    padding-top: 1rem;
   }
   footer p {
     height: 4vh;
   }
+
+  #inhaleText,
+  #exhaleText,
+  #holdText {
+    top: 0rem;
+  }
+
+  #inhaleText {
+    left: 0.3rem;
+  }
+
+  #exhaleText {
+    right: 1.5rem;
+  }
 }
-@media (min-width: 600px) {
+@media (min-width: 675px) {
   .btn_container {
-    width: 45%;
+    width: 50%;
     height: 20rem;
   }
 
@@ -368,16 +404,16 @@ footer p {
     height: 20dvb;
     padding-top: 3rem;
   }
-}
 
-@media (min-width: 1126px) {
-  .btn_container {
-    width: 60%;
-    height: 10rem;
+  #inhaleText,
+  #exhaleText,
+  #holdText {
+    top: 0.5rem;
   }
-
-  .headphonesIcon {
-    width: 17%;
-    height: auto;
+  .circle {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 2rem;
   }
 }
