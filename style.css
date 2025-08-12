@@ -6,7 +6,6 @@
 }
 
 :root {
-  --dur: 0.3s;
   --color-dark-blue: #005f6b;
   --color-light-blue: #008c9e;
   --color-cyan: #00b4cc;
@@ -22,121 +21,54 @@
   --font-size-lg: 24;
   --font-size-xlg: 28;
 }
-body,
-input {
-  color: hsl(0, 0%, 10%);
+
+body {
+  background-color: var(--color-dark-gray);
+  transition: 0.5s;
 }
-main,
-.toggle:before,
-.toggle:after {
-  background-color: hsl(0, 0%, 90%);
+body.active {
+  background: #f8f8f8;
 }
 
-main,
-.toggle {
+#toggle {
   position: relative;
+  display: block;
+  width: 320px;
+  height: 160px;
+  border-radius: 160px;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: insent 0 8px 60px rgba(0, 0, 0, 0.1),
+    insent 0 8px 8px rgba(0, 0, 0, 0.1), insent 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-main {
-  display: flex;
-  justify-content: center;
+#toggle.active {
+  background: #fff;
+  background-color: inset 0 2px 60px rgba(0, 0, 0, 0.01),
+    inset 0 2px 8px rgba(0, 0, 0, 0.01), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
 }
 
-.curtain,
-.sr,
-.toggle:before,
-.toggle:after {
+#toggle .indicator {
   position: absolute;
-}
-
-.curtain,
-.toggle:before,
-.toggle:after {
-  transition: transform var(--dur);
-}
-
-.curtain,
-.toggle:before,
-.toggle:checked:after {
-  transition-timing-function: ease-out;
-}
-
-.curtain,
-.sr {
   top: 0;
   left: 0;
-}
-
-.curtain {
-  background: hsl(0, 0%, 100%);
-  mix-blend-mode: difference;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  transform: scale(0);
-  transform-origin: 0 50%;
-}
-
-.sr,
-.toggle {
-  overflow: hidden;
-}
-
-.sr {
-  clip: rect(1px, 1px, 1px, 1px);
-  color: transparent;
-  width: 1px;
-  height: 1px;
-}
-
-.toggle {
-  background: currentColor;
-  border-radius: 0.75em;
-  cursor: pointer;
-  width: 3em;
-  height: 1.5em;
-  -webkit-tap-highlight-color: transparent;
-}
-.toggle:before,
-.toggle:after {
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(to bottom, #444, #222);
   border-radius: 50%;
-  content: "";
-  display: block;
-  top: 0.25em;
-  left: 0.25em;
-  width: 1em;
-  height: 1em;
+  transform: scale(0.9);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05),
+    insent 0 4px 4px rgba(255, 255, 255, 0.2),
+    insent 0 -4px 4px rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
 }
-
-.toggle:before,
-.toggle:checked:after {
-  transition-delay: 0s;
+#toggle.active .indicator {
+  left: 160px;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+    insent 0 4px 4px rgba(255, 255, 255, 1),
+    insent 0 -4px 4px rgba(255, 255, 255, 1);
 }
-
-.toggle:checked:before,
-.toggle:after {
-  transition-delay: calc((--dur) * 0.75);
-  transition-timing-function: cubic-bezier(0.3, 1.6);
-}
-
-.toggle:before {
-  transform: translateX(-1.5em);
-}
-
-.toggle:checked:before {
-  transform: translateX(1.5em);
-}
-
-.toggle:checked:after {
-  transform: translateX(3em);
-}
-.toggle:checked ~ .curtain {
-  transform: scaleX(1em);
-}
-.toggle:focus {
-  outline: transparent;
-}
-
 h1,
 h2,
 h3,

@@ -2,6 +2,14 @@ const section = document.querySelector(".btn_container");
 const circle = document.querySelector(".circle");
 const modal = document.getElementById("modal");
 
+const toggle = document.getElementById("toggle");
+const body = document.querySelector("body");
+
+toggle.onclick = function () {
+  toggle.classList.toggle("active");
+  body.classList.toggle("active");
+};
+
 window.addEventListener("click", (event) => {
   if (event.target === modal || !event.target.closest(".play-button")) {
     modal.style.display = "none";
