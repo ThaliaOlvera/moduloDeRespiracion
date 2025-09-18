@@ -31,9 +31,6 @@ body.active {
   background: var(--color-white);
 }
 
-.footer-container .active {
-  background-color: pink;
-}
 
 #toggle {
   position: absolute;
@@ -144,7 +141,7 @@ p {
 
 main {
   width: 100%;
-  height: 80dvb;
+  height: 90dvb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,13 +149,19 @@ main {
   padding-top: 5rem;
 }
 
+#audios{
+    width: 60%;
+    height: 50dvh;
+  }
+
 .btn_container {
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  text-align: center;
   gap: 0.5rem;
 }
 
@@ -287,34 +290,38 @@ main {
   animation: showExhale 12s ease-in-out infinite;
 }
 
+
 /*Footer*/
 
 footer {
   width: 100%;
-  height: 20vh;
+  height: 10vh;
   text-align: center;
+  transition: 0.5s;
 }
 
 .footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 footer p {
   width: 100%;
-  height: 7vh;
-
   align-content: end;
   color: var(--color-white);
-
-  margin: 16px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
+
+footer.active {
+  background-color: var(--color-gray);
+}
+
 
 .social-links {
   margin: 12px 0px 0px 0px;
   list-style-type: none;
-  padding: 0;
   display: flex;
   gap: 20px;
 }
@@ -335,11 +342,19 @@ footer p {
 /*Mobile view*/
 @media (max-width: 339px) {
   .btn_container {
-    width: 85%;
-    height: auto;
+    width: 90%;
     gap: 1rem;
-    padding-top: 1rem;
+    padding-top: 0rem;
   }
+  #audios {
+    width: 90%;
+    height: 50dvh;
+}
+  main {
+    padding-top: 0rem;
+  }
+
+ 
 
   .btn_container button {
     width: 6rem;
@@ -348,13 +363,13 @@ footer p {
 
   footer {
     width: 100%;
-    height: 20dvb;
+    height: 10dvb;
     padding-top: 0rem;
   }
 
   footer p {
     width: 95%;
-    height: 7vh;
+    height: 2vh;
 
     align-content: end;
     color: var(--color-white);
@@ -431,7 +446,12 @@ footer p {
   #exhaleText {
     right: 1.5rem;
   }
+
+   
 }
+
+
+
 @media (min-width: 675px) {
   .btn_container {
     width: 50%;
@@ -449,8 +469,8 @@ footer p {
   }
 
   footer {
-    height: 20dvb;
-    padding-top: 3rem;
+    height: 10vh;
+    padding-top: 0rem;
   }
 
   #inhaleText,

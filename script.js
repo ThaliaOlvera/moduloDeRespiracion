@@ -1,7 +1,7 @@
 const section = document.querySelector(".btn_container");
 const circle = document.querySelector(".circle");
 const modal = document.getElementById("modal");
-
+const footer = document.querySelector("footer");
 const toggle = document.getElementById("toggle");
 const body = document.querySelector("body");
 
@@ -9,6 +9,7 @@ const body = document.querySelector("body");
 toggle.onclick = function () {
   toggle.classList.toggle("active");
   body.classList.toggle("active");
+  footer.classList.toggle("active");  
 };
 
 window.addEventListener("click", (event) => {
