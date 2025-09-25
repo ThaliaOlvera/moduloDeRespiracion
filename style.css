@@ -97,7 +97,6 @@ p {
 .modal-content {
   width: 50%;
   height: 60dvb;
-  position: relative;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
@@ -113,16 +112,28 @@ p {
 }
 
 .headphonesIcon_container {
-  position: absolute;
-  top: 4rem;
-  left: 8rem;
+  max-width: 100%;
+  height: 50dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.headphonesIcon_container img
+{
+  width: 100%;
+  height: 40dvh;
+  object-position: center;
+  object-fit: contain;
 }
 
 .cancel-container {
   width: 100%;
-  height: 55dvh;
   text-align: end;
 }
+
 
 .cancel-container--btn {
   width: 3rem;
